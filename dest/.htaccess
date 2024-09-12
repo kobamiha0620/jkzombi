@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /home/users/1/main.jp-98366ac46649df11/web/.htpasswd
+require valid-user

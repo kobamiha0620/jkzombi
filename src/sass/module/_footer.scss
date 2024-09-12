@@ -1,0 +1,114 @@
+@use "./base/varuable"as var;
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.footer {
+  position: relative;
+  padding: 65px 0 10px;
+
+  &__zombi {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1151px;
+
+    &--01 {
+      width: clamp(19.8vw, 19.8%, 178px);
+    }
+
+    &--02 {
+      width: clamp(21.5vw, 21.5%, 198px);
+    }
+
+    &--03 {
+      width: clamp(14.6vw, 14.6%, 129px);
+    }
+
+    &--04 {
+      width: clamp(20.6vw, 20.6%, 189px);
+    }
+
+    &--05 {
+      width: clamp(20.6vw, 20.6%, 189px);
+    }
+
+    &--06 {
+      width: clamp(21.5vw, 21.5%, 198px);
+    }
+  }
+
+  &__tape {
+    position: absolute;
+    bottom: 0;
+    @include var.bg();
+    width: 100%;
+    padding-top: 40%;
+    background-image: url('../img/ribon_last.png');
+    background-position: center center;
+    background-size: 3267px 506px;
+    opacity: 0;
+    animation-duration: 1.3s;
+
+    &.show {
+      animation-name: fadeUpAnime;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    margin-top: 100px;
+
+    small {
+      @include var.fz(10);
+      color: var.$pink;
+    }
+  }
+
+
+  @media only screen and (max-width: var.$spw) {
+    &__tape {
+      position: absolute;
+      bottom: 15vw;
+      @include var.bg();
+      width: 100%;
+      padding-top: 26vw;
+      background-position: center center;
+      background-size: 300vw 46vw;
+
+    }
+
+    &__copy {
+      margin-top: 12vw;
+
+    }
+  }
+
+}
+
+
+.webp {
+  .footer__tape {
+    background-image: url('../img/ribon_last.webp') no-repeat;
+  }
+}

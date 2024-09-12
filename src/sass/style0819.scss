@@ -1,0 +1,532 @@
+@charset "UTF-8";
+
+@use "./base/varuable"as var;
+@import "./base/**/*.scss";
+@import "./module/*";
+@import url("https://use.typekit.net/vmh1hbi.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+* {
+  font-family: "Noto Sans JP", sans-serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック";
+}
+
+@media only screen and (max-width: var.$spw) {}
+
+body {
+  background-color: #000;
+}
+
+
+.header{
+  position: relative;
+  margin: 0 0 40px;
+  &__img{
+    width: 100%;
+    height: 100dvh;
+    height: 100vh;
+    position: relative;
+    img{
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100dvh;
+      height: 100vh;
+    }
+    picture{
+      object-fit: cover;
+      display: block;
+      width: 100%;
+      height: 100dvh;
+      height: 100vh;
+    }
+  }
+  &__credit{
+    font-family: "tenby-four", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-align: right;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    @include var.fz(20);
+  }
+  &__logo{
+    @include var.bg();
+    background-image: url('../img/img_logo.png');
+    width: 278px;
+    height: 138px;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+  }
+
+  @media only screen and (max-width: var.$spw) {
+    &__credit{
+      @include var.fz(14);
+    }
+    &__logo{
+      width: 30vw;
+      height: 15vw;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+  }
+}
+
+.ttl {
+  font-family: "tenby-four", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  color: var.$pink;
+  @include var.fz(46);
+  margin: 0 auto 28px;
+  letter-spacing: 0.1em;
+  @media only screen and (max-width: var.$spw) {
+    @include var.fz(40);
+    margin: 0 auto 5vw;
+  }
+
+}
+.txt{
+  color: #FFF;
+  line-height: 2.6;
+  @include var.fz(16);
+  @media only screen and (max-width: var.$spw) {
+    @include var.fz(14);
+    line-height: 2;
+  }
+
+}
+.txt2{
+  color: #FFF;
+  line-height: 1.6;
+  margin-top: 30px;
+  @include var.fz(16);
+  @media only screen and (max-width: var.$spw) {
+    @include var.fz(14);
+    line-height: 2;
+  }
+
+}
+.blc{
+  padding: 50px;
+  background-color: black;
+  @media only screen and (max-width: var.$spw) {
+    padding: 8vw 5vw;
+  }
+}
+.m20{
+  margin: 20px 0;
+}
+.img{
+  margin: 60px 0 16px;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about{
+  background-image: url('../img/ribon_01.png');
+  background-size: 3258px 708px;
+  background-position: center top 0px; 
+  width: 100%;
+  margin: 0 auto 20px;
+  &__wrapper{
+    padding-top: 178px;
+    position: relative;
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+
+  }
+  &__inner{
+
+
+    &--in{
+      width: 100%;
+      position: relative;
+    }
+  }
+  &__right{
+    width: 256px;
+    right: 46px;
+    top: 0;
+    position: absolute;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: var.$spw) {
+    background-size: 300vw 58.5vw;
+    background-position: center top 20vw; 
+    width: 100%;
+    padding: 0 5vw;
+    margin: 0 auto 5vw;
+    &__wrapper{
+      padding-top: 40vw;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+  
+    }
+    &__inner{
+  
+  
+      &--in{
+        width: 100%;
+        position: relative;
+      }
+    }
+    &__right{
+      width: 41vw;
+      right: 5vw;
+      top: 0;
+      position: absolute;
+    }
+  }
+}
+
+
+.story{
+  background-image: url('../img/ribon_02.png');
+  background-size: 3268px 832px;
+  background-position: center top -64px; 
+  width: 100%;
+  &__wrapper{
+    padding-top: 186px;
+    position: relative;
+    max-width: 760px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__inner{
+
+
+    &--in{
+      width: 100%;
+      position: relative;
+    }
+  }
+  &__left{
+    width: 186px;
+    left: 46px;
+    top: 0;
+    position: absolute;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media only screen and (max-width: var.$spw) {
+    background-size: 300vw 76vw;
+    background-position: center top 20vw; 
+    padding: 0 5vw;
+
+    width: 100%;
+    &__wrapper{
+      padding-top: 48vw;
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__left{
+      width: 39.7vw;
+      left: 5vw;
+      top: 0;
+      position: absolute;
+
+    }
+  
+  }
+}
+
+
+.webp {
+  .about {
+    background-image: url('../img/ribon_01.webp') no-repeat;
+  }
+  .story {
+    background-image: url('../img/ribon_02.webp') no-repeat;
+  }
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 998;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: 0.4s;
+  &.fadeOut{
+    opacity: 0;
+    z-index: -4;
+  }
+}
+
+.loading_logo {
+  width: 300px;
+}
+
+.fadeUp{
+  animation-name: fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+// .hero{
+//   background: url('../img/img_glinich.png') no-repeat;
+//   background-size: cover;
+//   width: 100%;
+//   height: 100dvh;
+//   height: 100vh;
+//   position: fixed;
+//   z-index: 999;
+//   top: 0;
+//   left: 0;
+// }
+  
+
+#container {
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+    position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: 0.4s;
+  &.fadeOut{
+    opacity: 0;
+    z-index: -4;
+  }
+}
+
+h1 {
+  white-space: nowrap;
+  text-indent: -9999px;
+
+  background: url('../img/img_glinich.png') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100dvh;
+  height: 100vh;
+  animation: glitch1 2.5s infinite;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-position: center center;
+}
+
+h1:nth-child(2) {
+  color: #67f3da;
+  animation: glitch2 2.5s infinite;
+  background: url('../img/img_glinich02.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+
+h1:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch3 2.5s infinite;
+  background: url('../img/img_glinich03.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+}
+/*Keyframes*/
+
+@keyframes glitch1 {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch2 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(-2px, -3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(-5px, -2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(-5px, -1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(-2px, -6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+@keyframes glitch3 {
+  0% {
+    transform: none;
+    opacity: 0.25;
+  }
+  7% {
+    transform: translate(2px, 3px);
+    opacity: 0.5;
+  }
+  10% {
+    transform: none;
+    opacity: 0.25;
+  }
+  27% {
+    transform: none;
+    opacity: 0.25;
+  }
+  30% {
+    transform: translate(5px, 2px);
+    opacity: 0.5;
+  }
+  35% {
+    transform: none;
+    opacity: 0.25;
+  }
+  52% {
+    transform: none;
+    opacity: 0.25;
+  }
+  55% {
+    transform: translate(5px, 1px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: none;
+    opacity: 0.25;
+  }
+  72% {
+    transform: none;
+    opacity: 0.25;
+  }
+  75% {
+    transform: translate(2px, 6px);
+    opacity: 0.5;
+  }
+  80% {
+    transform: none;
+    opacity: 0.25;
+  }
+  100% {
+    transform: none;
+    opacity: 0.25;
+  }
+}
+
+
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
